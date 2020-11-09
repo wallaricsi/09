@@ -105,3 +105,9 @@ li:before {
 li.parent:before {
     content: "\002B";
 }
+
+/* section részből kiszedni a minusz jelet - nav*/
+
+nav > ul > li:before {
+    content: none;
+}
