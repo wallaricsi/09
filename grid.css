@@ -1,0 +1,107 @@
+* {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: white;
+    margin: 0;
+}
+
+.grid-item,
+header,
+main,
+nav,
+aside,
+footer {
+    background: white;
+    color: black;
+    border: 1px solid white;
+}
+
+html,
+body {
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(min-content, 10em) auto;
+}
+
+header {
+    grid-column: 1/4;
+}
+
+main {
+    grid-column: 2/4;
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+img {
+    height: 50px;
+    width: 70px;
+}
+
+.cv {
+    margin-left: 30px;
+    margin-top: 50px;
+    border-radius: 70%;
+    height: 150px;
+    width: 120px;
+}
+
+.name {
+    display: inline-block;
+    padding-left: 28px;
+    padding-top: -100px;
+}
+
+a:nth-child(3) {
+    color: black;
+}
+
+/* ITT VAN DEFINÁLVA AZ ACCORDION */
+
+.parent::after {
+    content: "\002B";
+    font-size: 1.5rem;
+    position: absolute;
+    right: 30rem;
+    cursor: pointer;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.parent.active::after {
+    content: "\2212";
+    /* transform: rotate(90deg); */
+}
+
+.child {
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.parent.active + .child {
+    /*  display: block; */
+    max-height: 200px;
+}
+
+li {
+    list-style: none;
+}
+li:before {
+    content: "\2212";
+    padding-right: 15px;
+}
+
+li.parent:before {
+    content: "\002B";
+}
