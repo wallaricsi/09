@@ -68,19 +68,14 @@ a:nth-child(3) {
 
 /* ITT VAN DEFINÁLVA AZ ACCORDION */
 
-.parent::after {
+/* .parent::after {
     content: "\002B";
     font-size: 1.5rem;
     position: absolute;
     right: 30rem;
     cursor: pointer;
     transition: max-height 0.2s ease-in-out;
-}
-
-.parent.active::after {
-    content: "\2212";
-    /* transform: rotate(90deg); */
-}
+} */
 
 .child {
     /* display: none; */
@@ -104,6 +99,12 @@ li:before {
 
 li.parent:before {
     content: "\002B";
+    cursor: pointer;
+}
+
+li.active:before {
+    content: "\2212";
+    padding-right: 15px;
 }
 
 /* section részből kiszedni a minusz jelet - nav*/
