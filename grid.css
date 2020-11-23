@@ -90,7 +90,7 @@ a:nth-child(3) {
 
 .parent.active + .child {
     /*  display: block; */
-    max-height: 300px;
+    max-height: 350px;
 }
 
 li {
